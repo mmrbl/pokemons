@@ -13,16 +13,50 @@ ul, ol {
 
 .container {
   max-width: 1200px;
-  outline: 2px solid red;
   margin: auto;
 }
 
+
+
 .card {
-  background-color: tomato;
+  position: relative;
+  padding: 5px;
   width: 300px;
   min-height: 500px;
-  margin: 0 auto;
-  height: max-content;
+  margin: 10px auto;
+  min-height: 418px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4%;
 }
 
-.health {}
+.health {
+  max-width: max-content;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: auto;
+}
+
+.name {
+  font-size: 45px;
+}
+
+.ability {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.refresh {
+  position: absolute;
+  bottom: 10px;
+  transform: translateX(-50%);
+}

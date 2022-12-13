@@ -6,6 +6,7 @@ refreshBtn.addEventListener("click", takePoke);
 function getPokes() {
   const id = Math.floor(Math.random() * 905 + 1);
   const url = `https://pokeapi.co/api/v2/pokemon/`;
+  refreshBtn.textContent = "Another one!";
 
   return fetch(url + id).then((response) => {
     if (!response.ok) {
@@ -34,11 +35,11 @@ function createCard(data) {
   const markup = `<h2 class="health">${data.hp}</h2>
       <img src="${data.photo}" alt="${data.name}" width = "200" height = "200">
       <h1 class="name">${data.name}</h1>
-      <h2 class="ability">${data.ability}</h2>
+      <h2 class="ability">main skill: ${data.ability}</h2>
       <ul class="stats">
-        <li class="attack">${data.attack}</li>
-        <li class="defence">${data.defence}</li>
-        <li class="speed">${data.speed}</li>
+        <li class="attack">Attack: ${data.attack}</li>
+        <li class="defence">Defence: ${data.defence}</li>
+        <li class="speed">Speed: ${data.speed}</li>
       </ul>`;
 
   return (pokemon.innerHTML = markup);
