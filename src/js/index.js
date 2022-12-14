@@ -17,6 +17,7 @@ function getPokes() {
 }
 
 function takePoke() {
+  pokemon.innerHTML = "";
   getPokes().then((poke) => {
     const data = {
       name: poke.name,
